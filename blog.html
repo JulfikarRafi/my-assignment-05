@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <!-- Daisy UI + tailwind CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- font CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        .poppins-regular {
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+    </style>
+</head>
+
+<body class="bg-[#F4F7FF] px-36 py-6 poppins-regular">
+    <header>
+        <!-- navbar -->
+        <nav class="flex items-center justify-between bg-white px-6 py-6 rounded-2xl">
+            <!-- navbar left items -->
+            <div class="flex items-center gap-3">
+                <img src="./assets/logo.png" alt="logo">
+                <h1><span class="text-4xl">Dev</span><span class="text-4xl font-bold">Board</span></h1>
+            </div>
+            <!-- navbar right items -->
+            <button id="previous" class="bg-[#3752FD] btn text-[16px] text-white rounded-lg py-7 px-5">Back to Desk</button>
+        </nav>
+        <div class="flex justify-center">
+            <p class="font-bold text-3xl mt-4">Blogs</p>
+        </div>
+    </header>
+    <main>
+        <!-- Question-1 -->
+        <div class="bg-white px-5 py-5 rounded-2xl mt-6">
+            <h2 class="font-bold text-2xl">
+                Question-1: What are the different ways to select an element in the DOM?
+            </h2>
+            <hr class="border-dashed border text-gray-300 mt-5">
+            <p class="text-gray-400 text-xl mt-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae eveniet quisquam deleniti. Tempora alias, accusamus sit quas blanditiis quo labore asperiores, aliquid sint dolorem voluptatum magni, temporibus cupiditate adipisci quos?</p>
+        </div>
+        <!-- Question-2 -->
+        <div class="bg-white px-5 py-5 rounded-2xl mt-6">
+            <h2 class="font-bold text-2xl">
+                Question-2: What is the difference between innerHTML, innerText, and textContent ?
+            </h2>
+            <hr class="border-dashed border text-gray-300 mt-5">
+            <p class="text-gray-400 text-xl mt-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae eveniet quisquam deleniti. Tempora alias, accusamus sit quas blanditiis quo labore asperiores, aliquid sint dolorem voluptatum magni, temporibus cupiditate adipisci quos?</p>
+        </div>
+        <!-- Question-3 -->
+        <div class="bg-white px-5 py-5 rounded-2xl mt-6">
+            <h2 class="font-bold text-2xl">
+                Question-3: What is event delegation in the DOM?
+            </h2>
+            <hr class="border-dashed border text-gray-300 mt-5">
+            <p class="text-gray-400 text-xl mt-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae eveniet quisquam deleniti. Tempora alias, accusamus sit quas blanditiis quo labore asperiores, aliquid sint dolorem voluptatum magni, temporibus cupiditate adipisci quos?</p>
+        </div>
+        <!-- Question-4 -->
+        <div class="bg-white px-5 py-5 rounded-2xl mt-6">
+            <h2 class="font-bold text-2xl">
+                Question-4: What is event bubbling in the DOM?
+            </h2>
+            <hr class="border-dashed border text-gray-300 mt-5">
+            <p class="text-gray-400 text-xl mt-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae eveniet quisquam deleniti. Tempora alias, accusamus sit quas blanditiis quo labore asperiores, aliquid sint dolorem voluptatum magni, temporibus cupiditate adipisci quos?</p>
+        </div>
+        <!-- Question-5 -->
+        <div class="bg-white px-5 py-5 rounded-2xl mt-6">
+            <h2 class="font-bold text-2xl">
+                Question-5: How do you create, add, and remove elements using JavaScript?
+            </h2>
+            <hr class="border-dashed border text-gray-300 mt-5">
+            <p class="text-gray-400 text-xl mt-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae eveniet quisquam deleniti. Tempora alias, accusamus sit quas blanditiis quo labore asperiores, aliquid sint dolorem voluptatum magni, temporibus cupiditate adipisci quos?</p>
+        </div>
+    </main>
+    <footer></footer>
+<script>
+    document.getElementById('previous').addEventListener('click',function(){
+        window.location.href="./index.html"
+    })
+</script>
+</body>
+
+</html>
