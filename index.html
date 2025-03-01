@@ -97,7 +97,7 @@
                         </div>
                         <div>
                             <button
-                                class="bg-[#3752FD] btn text-[16px] text-white rounded-lg py-2 px-5 btn-completed">Completed</button>
+                                class="bg-[#3752FD] btn text-[16px] text-white rounded-lg py-2 px-5 btn-completed1">Completed</button>
                         </div>
                     </div>
                 </div>
@@ -118,7 +118,7 @@
                         </div>
                         <div>
                             <button
-                                class="bg-[#3752FD] btn text-[16px] text-white rounded-lg py-2 px-5 btn-completed">Completed</button>
+                                class="bg-[#3752FD] btn text-[16px] text-white rounded-lg py-2 px-5 btn-completed2">Completed</button>
                         </div>
                     </div>
                 </div>
@@ -139,7 +139,7 @@
                         </div>
                         <div>
                             <button
-                                class="bg-[#3752FD] btn text-[16px] text-white rounded-lg py-2 px-5 btn-completed">Completed</button>
+                                class="bg-[#3752FD] btn text-[16px] text-white rounded-lg py-2 px-5 btn-completed3">Completed</button>
                         </div>
                     </div>
                 </div>
@@ -160,7 +160,7 @@
                         </div>
                         <div>
                             <button
-                                class="bg-[#3752FD] btn text-[16px] text-white rounded-lg py-2 px-5 btn-completed">Completed</button>
+                                class="bg-[#3752FD] btn text-[16px] text-white rounded-lg py-2 px-5 btn-completed4">Completed</button>
                         </div>
                     </div>
                 </div>
@@ -181,7 +181,7 @@
                         </div>
                         <div>
                             <button
-                                class="bg-[#3752FD] btn text-[16px] text-white rounded-lg py-2 px-5 btn-completed">Completed</button>
+                                class="bg-[#3752FD] btn text-[16px] text-white rounded-lg py-2 px-5 btn-completed5">Completed</button>
                         </div>
                     </div>
                 </div>
@@ -202,7 +202,7 @@
                         </div>
                         <div>
                             <button
-                                class="bg-[#3752FD] btn text-[16px] text-white rounded-lg py-2 px-5 btn-completed">Completed</button>
+                                class="bg-[#3752FD] btn text-[16px] text-white rounded-lg py-2 px-5 btn-completed6">Completed</button>
                         </div>
                     </div>
                 </div>
@@ -217,16 +217,17 @@
                 <h2 class="text-xl">Activity Log</h2>
             </div>
             <div class="flex justify-center">
-                <button class="bg-[#3752FD] btn text-[16px] text-white rounded-lg py-2 px-5">Clear History</button>
+                <button id="clearHistory" class="bg-[#3752FD] btn text-[16px] text-white rounded-lg py-2 px-5">Clear
+                    History</button>
             </div>
             <hr class="border-dashed border text-gray-300 mt-2">
             <div class="complete-notification">
-                <p class="bg-[#F4F7FF] py-1 px-2 rounded-lg text-gray-400 mt-5 mb-5 ">You have Complete The Task Add
+                <!-- <p class="bg-[#F4F7FF] py-1 px-2 rounded-lg text-gray-400 mt-5 mb-5 ">You have Complete The Task Add
                     Dark
                     Mode at 12:48:15 PM</p>
                 <p class="bg-[#F4F7FF] py-1 px-2 rounded-lg text-gray-400 mt-5 mb-5 ">You have Complete The Task Add
                     Dark
-                    Mode at 12:48:15 PM</p>
+                    Mode at 12:48:15 PM</p> -->
 
             </div>
 
@@ -237,14 +238,47 @@
 
 
 
-// for first button
-
-        const completeButtons = document.querySelectorAll(".btn-completed");
+// complete button 1 + task count increase + taskdone decrease
+        let completeButtons1 = document.querySelectorAll(".btn-completed1");
         // for taskcount decrease
         const taskCount = document.getElementById("taskCount");
         // for taskdone increase
         const taskDone = document.getElementById("taskDone");
-        completeButtons.forEach((button) => {
+        completeButtons1.forEach((button) => {
+            button.addEventListener("click", function () {
+                alert("Board updated successfully");
+                this.disabled = true;
+                this.classList.add("opacity-50");
+
+
+                let Count = parseInt(taskCount.textContent);
+                taskCount.textContent = Count - 1;
+
+                let done = parseInt(taskDone.textContent);
+                taskDone.textContent = done + 1;
+                const completeNotification = document.querySelector(".complete-notification");
+
+                const time = new Date();
+                const hour = time.getHours();
+                const minute = time.getMinutes();
+                const second = time.getSeconds();
+                const ampm = hour >= 12 ? 'PM' : 'AM';
+                const formattedTime = `${hour % 12 || 12}:${minute < 10 ? '0' + minute : minute}:${second < 10 ? '0' + second : second} ${ampm}`;
+                const activityMessage = `You have completed the task Fix Mobile Button Issue at ${formattedTime}`;
+                const notification = document.createElement("p");
+                notification.classList.add("bg-[#F4F7FF]", "py-3", "px-3", "rounded-lg", "mt-5", "mb-5");
+                notification.textContent = activityMessage;
+
+                completeNotification.appendChild(notification);
+
+            });
+        });
+
+
+// complete button 2
+
+        let completeButtons2 = document.querySelectorAll(".btn-completed2");
+        completeButtons2.forEach((button) => {
             button.addEventListener("click", function () {
                 alert("Board updated successfully");
                 this.disabled = true;
@@ -257,31 +291,201 @@
                 let done = parseInt(taskDone.textContent);
                 taskDone.textContent = done + 1;
 
-             // Add activity log entry with current time
-  // Add activity log entry with current time
-        const completeNotification = document.querySelector(".complete-notification");
-
-        const currentTime = new Date();
-        const hours = currentTime.getHours();
-        const minutes = currentTime.getMinutes();
-        const seconds = currentTime.getSeconds();
-        const ampm = hours >= 12 ? 'PM' : 'AM';
-        const formattedTime = `${hours % 12 || 12}:${minutes < 10 ? '0' + minutes : minutes}:${seconds < 10 ? '0' + seconds : seconds} ${ampm}`;
-
-        const activityMessage = `You have completed the task at ${formattedTime}`;
-
-        // Create a new p element with the message
-        const newActivityLog = document.createElement("p");
-        newActivityLog.classList.add("bg-[#F4F7FF]", "py-1", "px-2", "rounded-lg", "text-gray-400", "mt-5", "mb-5");
-        newActivityLog.textContent = activityMessage;
-
-        // Append it to the complete-notification div
-        completeNotification.appendChild(newActivityLog);
-
-
-
+                const completeNotification = document.querySelector(".complete-notification");
+                const time = new Date();
+                const hour = time.getHours();
+                const minute = time.getMinutes();
+                const second = time.getSeconds();
+                const ampm = hour >= 12 ? 'PM' : 'AM';
+                const formattedTime = `${hour % 12 || 12}:${minute < 10 ? '0' + minute : minute}:${second < 10 ? '0' + second : second} ${ampm}`;
+                const activityMessage = `You have completed the task Add Dark Mode at ${formattedTime}`;
+                const notification = document.createElement("p");
+                notification.classList.add("bg-[#F4F7FF]", "py-3", "px-3", "rounded-lg", "mt-5", "mb-5");
+                notification.textContent = activityMessage;
+                completeNotification.appendChild(notification);
             });
         });
+
+        // complete button 3
+
+        let completeButtons3 = document.querySelectorAll(".btn-completed3");
+        completeButtons3.forEach((button) => {
+            button.addEventListener("click", function () {
+                alert("Board updated successfully");
+                this.disabled = true;
+                this.classList.add("opacity-50");
+
+
+                let Count = parseInt(taskCount.textContent);
+                taskCount.textContent = Count - 1;
+
+                let done = parseInt(taskDone.textContent);
+                taskDone.textContent = done + 1;
+
+                const completeNotification = document.querySelector(".complete-notification");
+                const time = new Date();
+                const hour = time.getHours();
+                const minute = time.getMinutes();
+                const second = time.getSeconds();
+                const ampm = hour >= 12 ? 'PM' : 'AM';
+                const formattedTime = `${hour % 12 || 12}:${minute < 10 ? '0' + minute : minute}:${second < 10 ? '0' + second : second} ${ampm}`;
+                const activityMessage = `You have completed the task Optimize Home page at ${formattedTime}`;
+                const notification = document.createElement("p");
+                notification.classList.add("bg-[#F4F7FF]", "py-3", "px-3", "rounded-lg", "mt-5", "mb-5");
+                notification.textContent = activityMessage;
+                completeNotification.appendChild(notification);
+            });
+        });
+
+        // complete button 4
+
+        let completeButtons4 = document.querySelectorAll(".btn-completed4");
+        completeButtons4.forEach((button) => {
+            button.addEventListener("click", function () {
+                alert("Board updated successfully");
+                this.disabled = true;
+                this.classList.add("opacity-50");
+
+
+                let Count = parseInt(taskCount.textContent);
+                taskCount.textContent = Count - 1;
+
+                let done = parseInt(taskDone.textContent);
+                taskDone.textContent = done + 1;
+
+                const completeNotification = document.querySelector(".complete-notification");
+                const time = new Date();
+                const hour = time.getHours();
+                const minute = time.getMinutes();
+                const second = time.getSeconds();
+                const ampm = hour >= 12 ? 'PM' : 'AM';
+                const formattedTime = `${hour % 12 || 12}:${minute < 10 ? '0' + minute : minute}:${second < 10 ? '0' + second : second} ${ampm}`;
+                const activityMessage = `You have completed the task Add new emoji 🤲 at ${formattedTime}`;
+                const notification = document.createElement("p");
+                notification.classList.add("bg-[#F4F7FF]", "py-3", "px-3", "rounded-lg", "mt-5", "mb-5");
+                notification.textContent = activityMessage;
+                completeNotification.appendChild(notification);
+            });
+        });
+        // complete button 5
+
+        let completeButtons5 = document.querySelectorAll(".btn-completed5");
+        completeButtons5.forEach((button) => {
+            button.addEventListener("click", function () {
+                alert("Board updated successfully");
+                this.disabled = true;
+                this.classList.add("opacity-50");
+
+
+                let Count = parseInt(taskCount.textContent);
+                taskCount.textContent = Count - 1;
+
+                let done = parseInt(taskDone.textContent);
+                taskDone.textContent = done + 1;
+
+                const completeNotification = document.querySelector(".complete-notification");
+                const time = new Date();
+                const hour = time.getHours();
+                const minute = time.getMinutes();
+                const second = time.getSeconds();
+                const ampm = hour >= 12 ? 'PM' : 'AM';
+                const formattedTime = `${hour % 12 || 12}:${minute < 10 ? '0' + minute : minute}:${second < 10 ? '0' + second : second} ${ampm}`;
+                const activityMessage = `You have completed the task Integrate OpenAI API at ${formattedTime}`;
+                const notification = document.createElement("p");
+                notification.classList.add("bg-[#F4F7FF]", "py-3", "px-3", "rounded-lg", "mt-5", "mb-5");
+                notification.textContent = activityMessage;
+                completeNotification.appendChild(notification);
+            });
+        });
+        // complete button 6
+
+        let completeButtons6 = document.querySelectorAll(".btn-completed6");
+        completeButtons6.forEach((button) => {
+            button.addEventListener("click", function () {
+                alert("Board updated successfully");
+                this.disabled = true;
+                this.classList.add("opacity-50");
+
+
+                let Count = parseInt(taskCount.textContent);
+                taskCount.textContent = Count - 1;
+
+                let done = parseInt(taskDone.textContent);
+                taskDone.textContent = done + 1;
+
+                const completeNotification = document.querySelector(".complete-notification");
+                const time = new Date();
+                const hour = time.getHours();
+                const minute = time.getMinutes();
+                const second = time.getSeconds();
+                const ampm = hour >= 12 ? 'PM' : 'AM';
+                const formattedTime = `${hour % 12 || 12}:${minute < 10 ? '0' + minute : minute}:${second < 10 ? '0' + second : second} ${ampm}`;
+                const activityMessage = `You have completed the task Improve Job searching at ${formattedTime}`;
+                const notification = document.createElement("p");
+                notification.classList.add("bg-[#F4F7FF]", "py-3", "px-3", "rounded-lg", "mt-5", "mb-5");
+                notification.textContent = activityMessage;
+                completeNotification.appendChild(notification);
+            });
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // clear history js
+        document.getElementById("clearHistory").addEventListener("click", function () {
+            const completeNotification = document.querySelector(".complete-notification");
+            completeNotification.innerHTML = '';
+        });
+
+
+
+
+
+
 
 
 
