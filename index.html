@@ -220,18 +220,30 @@
                 <button class="bg-[#3752FD] btn text-[16px] text-white rounded-lg py-2 px-5">Clear History</button>
             </div>
             <hr class="border-dashed border text-gray-300 mt-2">
-            <p class="bg-[#F4F7FF] py-1 px-2 rounded-lg text-gray-400 mt-5 mb-5 ">You have Complete The Task Add Dark
-                Mode at 12:48:15 PM</p>
-            <p class="bg-[#F4F7FF] py-1 px-2 rounded-lg text-gray-400 mt-5 mb-5 ">You have Complete The Task Add Dark
-                Mode at 12:48:15 PM</p>
+            <div class="complete-notification">
+                <p class="bg-[#F4F7FF] py-1 px-2 rounded-lg text-gray-400 mt-5 mb-5 ">You have Complete The Task Add
+                    Dark
+                    Mode at 12:48:15 PM</p>
+                <p class="bg-[#F4F7FF] py-1 px-2 rounded-lg text-gray-400 mt-5 mb-5 ">You have Complete The Task Add
+                    Dark
+                    Mode at 12:48:15 PM</p>
+
+            </div>
 
 
         </section>
     </main>
     <script>
 
+
+
+// for first button
+
         const completeButtons = document.querySelectorAll(".btn-completed");
-        const taskCount = document.querySelector("#taskCount");
+        // for taskcount decrease
+        const taskCount = document.getElementById("taskCount");
+        // for taskdone increase
+        const taskDone = document.getElementById("taskDone");
         completeButtons.forEach((button) => {
             button.addEventListener("click", function () {
                 alert("Board updated successfully");
@@ -239,13 +251,95 @@
                 this.classList.add("opacity-50");
 
 
-                let currentCount = parseInt(taskCount.textContent);
-                taskCount.textContent = currentCount - 1;
+                let Count = parseInt(taskCount.textContent);
+                taskCount.textContent = Count - 1;
+
+                let done = parseInt(taskDone.textContent);
+                taskDone.textContent = done + 1;
+
+             // Add activity log entry with current time
+  // Add activity log entry with current time
+        const completeNotification = document.querySelector(".complete-notification");
+
+        const currentTime = new Date();
+        const hours = currentTime.getHours();
+        const minutes = currentTime.getMinutes();
+        const seconds = currentTime.getSeconds();
+        const ampm = hours >= 12 ? 'PM' : 'AM';
+        const formattedTime = `${hours % 12 || 12}:${minutes < 10 ? '0' + minutes : minutes}:${seconds < 10 ? '0' + seconds : seconds} ${ampm}`;
+
+        const activityMessage = `You have completed the task at ${formattedTime}`;
+
+        // Create a new p element with the message
+        const newActivityLog = document.createElement("p");
+        newActivityLog.classList.add("bg-[#F4F7FF]", "py-1", "px-2", "rounded-lg", "text-gray-400", "mt-5", "mb-5");
+        newActivityLog.textContent = activityMessage;
+
+        // Append it to the complete-notification div
+        completeNotification.appendChild(newActivityLog);
 
 
 
             });
         });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
