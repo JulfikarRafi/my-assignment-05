@@ -36,7 +36,7 @@
             <div class="flex items-center gap-9">
                 <div class="flex items-center bg-[#F4F7FF] px-4 py-4 rounded-full gap-3 ">
                     <img src="./assets/checkbox.png" alt="checkbox">
-                    <h1 class="font-bold text-3xl">23</h1>
+                    <h1 id="taskDone" class="font-bold text-3xl">23</h1>
                 </div>
                 <div class="bg-[#F4F7FF] rounded-full px-4 py-4 cursor-pointer" onclick="changeBG()">
                     <img src="/assets/theme-btn.png" alt="theme">
@@ -56,7 +56,7 @@
 
                     <div>
                         <p class="text-[14px]">Task Assigned</p>
-                        <h1 class="text-[32px] font-bold">06</h1>
+                        <h1 id="taskCount" class="text-[32px] font-bold">6</h1>
                     </div>
                 </div>
                 <!-- mid item -->
@@ -230,17 +230,25 @@
     </main>
     <script>
 
-const completeButtons = document.querySelectorAll(".btn-completed");
-completeButtons.forEach((button) => {
-    button.addEventListener("click", function () {
-        alert("Board updated successfully");
-        this.disabled = true;
-        this.after.add("opacity-50");
-    });
-});
+        const completeButtons = document.querySelectorAll(".btn-completed");
+        const taskCount = document.querySelector("#taskCount");
+        completeButtons.forEach((button) => {
+            button.addEventListener("click", function () {
+                alert("Board updated successfully");
+                this.disabled = true;
+                this.classList.add("opacity-50");
 
 
- 
+                let currentCount = parseInt(taskCount.textContent);
+                taskCount.textContent = currentCount - 1;
+
+
+
+            });
+        });
+
+
+
 
 
 
