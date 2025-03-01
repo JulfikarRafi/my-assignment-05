@@ -17,3 +17,10 @@ function changeBG(){
     const randomColors=['#FFCDD2', '#C8E6C9', '#BBDEFB', '#F4F7FF', '#D1C4E9', '#FFF9C4','#E0BCBC','#FFC078','#B3FF78','#78FFD6','#78FFF6','#A1E8FF','#AC96FF'];
     document.body.style.backgroundColor = randomColors[Math.floor(Math.random()*randomColors.length)];
 }
+
+
+
+
+
+
+// last alert
