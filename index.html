@@ -26,7 +26,7 @@
 <body class="bg-[#F4F7FF] px-36 py-6 poppins-regular">
     <header>
         <!-- navbar -->
-        <nav class="flex items-center justify-between bg-white px-6 py-6 rounded-2xl">
+        <nav class="flex items-center justify-between bg-white px-6 py-6 rounded-2xl drop-shadow-lg">
             <!-- navbar left items -->
             <div class="flex items-center gap-3">
                 <img src="./assets/logo.png" alt="logo">
@@ -34,11 +34,11 @@
             </div>
             <!-- navbar right items -->
             <div class="flex items-center gap-9">
-                <div class="flex items-center bg-[#F4F7FF] px-4 py-4 rounded-full gap-3 ">
+                <div class="flex items-center bg-[#F4F7FF] px-4 py-4 rounded-full gap-3 drop-shadow-md ">
                     <img src="./assets/checkbox.png" alt="checkbox">
                     <h1 id="taskDone" class="font-bold text-3xl">23</h1>
                 </div>
-                <div class="bg-[#F4F7FF] rounded-full px-4 py-4 cursor-pointer" onclick="changeBG()">
+                <div class="bg-[#F4F7FF] rounded-full px-4 py-4 cursor-pointer drop-shadow-md" onclick="changeBG()">
                     <img src="/assets/theme-btn.png" alt="theme">
                 </div>
             </div>
@@ -46,13 +46,15 @@
     </header>
     <main class="mt-5 flex gap-5">
         <!-- left section -->
-        <section class="bg-white px-6 py-6 w-3/4 rounded-2xl">
+        <section class="bg-white px-6 py-6 w-3/4 rounded-2xl drop-shadow-lg">
             <!-- main section top boxes -->
             <div class="flex items-center gap-6">
                 <!-- left item -->
-                <div class="w-1/4 bg-[#F4F7FF] px-3 py-6 h-36 flex items-center gap-5 rounded-xl">
+                <div class="w-1/4 bg-[#F4F7FF] px-3 py-6 h-36 flex items-center gap-5 rounded-xl drop-shadow-md">
 
-                    <img class="bg-white rounded-full px-4 py-4" src="./assets/checkbox.png" alt="">
+                    <div class="bg-white rounded-full px-4 py-4 drop-shadow-md">
+                    <img src="./assets/checkbox.png" alt="">
+                </div>
 
                     <div>
                         <p class="text-[14px]">Task Assigned</p>
@@ -61,15 +63,17 @@
                 </div>
                 <!-- mid item -->
                 <div id="discover"
-                    class="w-2/4 h-36 bg-linear-to-r from-[#3752FD] to-[#9BA8F8] pl-8 pr-6 py-7 rounded-xl flex items-center gap-6 cursor-pointer">
-                    <img src="./assets/board.png" alt="board">
+                    class="w-2/4 h-36 bg-linear-to-r from-[#3752FD] to-[#9BA8F8] pl-8 pr-6 py-7 rounded-xl flex items-center gap-6 cursor-pointer drop-shadow-md">
+                    <img class="drop-shadow-md" src="./assets/board.png" alt="board">
                     <p class="text-white text-2xl">Discover Something New Today!</p>
 
                 </div>
                 <!-- right item -->
-                <div class="w-1/4 h-36 bg-[#F4F7FF] px-3 py-7 flex items-center gap-5 rounded-xl">
+                <div class="w-1/4 h-36 bg-[#F4F7FF] px-3 py-7 flex items-center gap-5 rounded-xl drop-shadow-md">
+                    <div class="bg-white rounded-full  px-4 py-4 drop-shadow-md">
 
-                    <img class="bg-white rounded-full px-4 py-4" src="./assets/calender.png" alt="">
+                        <img src="./assets/calender.png" alt="">
+                    </div>
 
                     <div>
                         <h1 id="currentDate&Time" class="text-[22px] font-bold"></h1>
@@ -81,7 +85,7 @@
             <!-- box container -->
             <div class="grid grid-cols-3 gap-6">
                 <!-- box1 -->
-                <div class="bg-[#F4F7FF] px-4 py-4 rounded-2xl">
+                <div class="bg-[#F4F7FF] px-4 py-4 rounded-2xl drop-shadow-md">
                     <button class="text-[16px] bg-white py-2 px-4 rounded-lg mb-2">ShopEase</button>
                     <h1 class="text-xl font-semibold mb-2">Fix Mobile Button Issue </h1>
                     <p
@@ -97,12 +101,12 @@
                         </div>
                         <div>
                             <button
-                                class="bg-[#3752FD] btn text-[16px] text-white rounded-lg py-2 px-5 btn-completed1 last-alert">Completed</button>
+                                class="bg-[#3752FD] btn text-[16px] text-white rounded-lg py-2 px-5 btn-completed1 last-alert drop-shadow-md">Completed</button>
                         </div>
                     </div>
                 </div>
                 <!-- box2 -->
-                <div class="bg-[#F4F7FF] px-4 py-4 rounded-2xl">
+                <div class="bg-[#F4F7FF] px-4 py-4 rounded-2xl drop-shadow-md">
                     <button class="text-[16px] bg-white py-2 px-4 rounded-lg mb-2">CloudSync</button>
                     <h1 class="text-xl font-semibold mb-2">Add Dark Mode</h1>
                     <p
@@ -114,16 +118,16 @@
                     <div class="flex items-center gap-8">
                         <div>
                             <p class="text-gray-400 text-[16px]">Deadline</p>
-                            <p class="text-[16px]">21 March 2025</p>
+                            <p class="text-[16px]">1 April 2025</p>
                         </div>
                         <div>
                             <button
-                                class="bg-[#3752FD] btn text-[16px] text-white rounded-lg py-2 px-5 btn-completed2 last-alert">Completed</button>
+                                class="bg-[#3752FD] btn text-[16px] text-white rounded-lg py-2 px-5 btn-completed2 last-alert drop-shadow-md">Completed</button>
                         </div>
                     </div>
                 </div>
                 <!-- box3 -->
-                <div class="bg-[#F4F7FF] px-4 py-4 rounded-2xl">
+                <div class="bg-[#F4F7FF] px-4 py-4 rounded-2xl drop-shadow-md">
                     <button class="text-[16px] bg-white py-2 px-4 rounded-lg mb-2">SwiftPay</button>
                     <h1 class="text-xl font-semibold mb-2">Optimize Home page</h1>
                     <p
@@ -135,16 +139,16 @@
                     <div class="flex items-center gap-8">
                         <div>
                             <p class="text-gray-400 text-[16px]">Deadline</p>
-                            <p class="text-[16px]">21 March 2025</p>
+                            <p class="text-[16px]">31 March 2025</p>
                         </div>
                         <div>
                             <button
-                                class="bg-[#3752FD] btn text-[16px] text-white rounded-lg py-2 px-5 btn-completed3 last-alert">Completed</button>
+                                class="bg-[#3752FD] btn text-[16px] text-white rounded-lg py-2 px-5 btn-completed3 last-alert drop-shadow-md">Completed</button>
                         </div>
                     </div>
                 </div>
                 <!-- box4 -->
-                <div class="bg-[#F4F7FF] px-4 py-4 rounded-2xl">
+                <div class="bg-[#F4F7FF] px-4 py-4 rounded-2xl drop-shadow-md">
                     <button class="text-[16px] bg-white py-2 px-4 rounded-lg mb-2">Meta</button>
                     <h1 class="text-xl font-semibold mb-2">Add new emoji 🤲</h1>
                     <p
@@ -160,12 +164,12 @@
                         </div>
                         <div>
                             <button
-                                class="bg-[#3752FD] btn text-[16px] text-white rounded-lg py-2 px-5 btn-completed4 last-alert">Completed</button>
+                                class="bg-[#3752FD] btn text-[16px] text-white rounded-lg py-2 px-5 btn-completed4 last-alert drop-shadow-md">Completed</button>
                         </div>
                     </div>
                 </div>
                 <!-- box5 -->
-                <div class="bg-[#F4F7FF] px-4 py-4 rounded-2xl">
+                <div class="bg-[#F4F7FF] px-4 py-4 rounded-2xl drop-shadow-md">
                     <button class="text-[16px] bg-white py-2 px-4 rounded-lg mb-2">Google LLC</button>
                     <h1 class="text-xl font-semibold mb-2">Integrate OpenAI API </h1>
                     <p
@@ -177,16 +181,16 @@
                     <div class="flex items-center gap-8">
                         <div>
                             <p class="text-gray-400 text-[16px]">Deadline</p>
-                            <p class="text-[16px]">21 March 2025</p>
+                            <p class="text-[16px]">1 April 2025</p>
                         </div>
                         <div>
                             <button
-                                class="bg-[#3752FD] btn text-[16px] text-white rounded-lg py-2 px-5 btn-completed5 last-alert">Completed</button>
+                                class="bg-[#3752FD] btn text-[16px] text-white rounded-lg py-2 px-5 btn-completed5 last-alert drop-shadow-md">Completed</button>
                         </div>
                     </div>
                 </div>
                 <!-- box6 -->
-                <div class="bg-[#F4F7FF] px-4 py-4 rounded-2xl">
+                <div class="bg-[#F4F7FF] px-4 py-4 rounded-2xl drop-shadow-md">
                     <button class="text-[16px] bg-white py-2 px-4 rounded-lg mb-2">Glassdoar</button>
                     <h1 class="text-xl font-semibold mb-2">Improve Job searching </h1>
                     <p
@@ -198,11 +202,11 @@
                     <div class="flex items-center gap-5">
                         <div>
                             <p class="text-gray-400 text-[16px]">Deadline</p>
-                            <p class="text-[16px]">21 March 2025</p>
+                            <p class="text-[16px]">5 May 2025</p>
                         </div>
                         <div>
                             <button
-                                class="bg-[#3752FD] btn text-[16px] text-white rounded-lg py-2 px-5 btn-completed6 last-alert">Completed</button>
+                                class="bg-[#3752FD] btn text-[16px] text-white rounded-lg py-2 px-5 btn-completed6 last-alert drop-shadow-md">Completed</button>
                         </div>
                     </div>
                 </div>
@@ -211,17 +215,17 @@
 
         </section>
         <!-- right section -->
-        <section class="w-1/4 bg-white px-6 py-6 rounded-2xl">
+        <section class="w-1/4 bg-white px-6 py-6 rounded-2xl drop-shadow-lg">
             <div class="flex gap-4 justify-center mb-3">
                 <img src="./assets/activity.png" alt="activity">
                 <h2 class="text-xl">Activity Log</h2>
             </div>
             <div class="flex justify-center">
-                <button id="clearHistory" class="bg-[#3752FD] btn text-[16px] text-white rounded-lg py-2 px-5">Clear
+                <button id="clearHistory" class="bg-[#3752FD] btn text-[16px] text-white rounded-lg py-2 px-5 drop-shadow-md">Clear
                     History</button>
             </div>
             <hr class="border-dashed border text-gray-300 mt-2">
-            <div class="complete-notification">
+            <div class="complete-notification drop-shadow-md">
 
             </div>
 
@@ -230,9 +234,7 @@
     </main>
     <script>
 
-
-
-// complete button 1 + task count increase + taskdone decrease
+        // complete button 1 + task count increase + taskdone decrease
         let completeButtons1 = document.querySelectorAll(".btn-completed1");
         // for taskcount decrease
         const taskCount = document.getElementById("taskCount");
@@ -269,7 +271,7 @@
         });
 
 
-// complete button 2
+        // complete button 2
 
         let completeButtons2 = document.querySelectorAll(".btn-completed2");
         completeButtons2.forEach((button) => {
@@ -421,36 +423,6 @@
                 completeNotification.appendChild(notification);
             });
         });
-
-
-
-
-        // final alert
-        const buttons = document.querySelectorAll(".last-alert");
-
-
-let clickedTime = 0;
-
-buttons.forEach(button => {
-    button.addEventListener("click", function () {
-        clickedTime++;
-        if (clickedTime === buttons.length) {
-            alert("Congratulations! You have clicked all the buttons.");
-        }
-    });
-});
-
-
-
-
-        // clear history js
-        document.getElementById("clearHistory").addEventListener("click", function () {
-            const completeNotification = document.querySelector(".complete-notification");
-            completeNotification.innerHTML = '';
-        });
-
-
-
 
     </script>
     <script src="./script/script.js"></script>

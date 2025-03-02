@@ -19,8 +19,31 @@ function changeBG(){
 }
 
 
+// final alert
+const buttons = document.querySelectorAll(".last-alert");
+
+
+let clickedTime = 0;
+
+buttons.forEach(button => {
+    button.addEventListener("click", function () {
+        clickedTime++;
+        if (clickedTime === buttons.length) {
+            alert("Congratulations!!! You have completed all the current task");
+        }
+    });
+});
 
 
 
 
-// last alert
+// clear history js
+document.getElementById("clearHistory").addEventListener("click", function () {
+    const completeNotification = document.querySelector(".complete-notification");
+    completeNotification.innerHTML = '';
+});
+
+
+
+
+

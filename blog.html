@@ -26,14 +26,14 @@
 <body class="bg-[#F4F7FF] px-36 py-6 poppins-regular">
     <header>
         <!-- navbar -->
-        <nav class="flex items-center justify-between bg-white px-6 py-6 rounded-2xl">
+        <nav class="flex items-center justify-between bg-white px-6 py-6 rounded-2xl drop-shadow-lg">
             <!-- navbar left items -->
             <div class="flex items-center gap-3">
                 <img src="./assets/logo.png" alt="logo">
                 <h1><span class="text-4xl">Dev</span><span class="text-4xl font-bold">Board</span></h1>
             </div>
             <!-- navbar right items -->
-            <button id="previous" class="bg-[#3752FD] btn text-[16px] text-white rounded-lg py-7 px-5">Back to Desk</button>
+            <button id="previous" class="bg-[#3752FD] btn text-[16px] text-white rounded-lg py-7 px-5 drop-shadow-lg">Back to Desk</button>
         </nav>
         <div class="flex justify-center">
             <p class="font-bold text-3xl mt-4">Blogs</p>
@@ -41,15 +41,15 @@
     </header>
     <main>
         <!-- Question-1 -->
-        <div class="bg-white px-5 py-5 rounded-2xl mt-6">
+        <div class="bg-white px-5 py-5 rounded-2xl mt-6 drop-shadow-lg">
             <h2 class="font-bold text-2xl">
                 Question-1: What are the different ways to select an element in the DOM?
             </h2>
             <hr class="border-dashed border text-gray-300 mt-5">
-            <p class="text-gray-400 text-xl mt-5">There are many ways to select an element in DOM, such as By ID,by Class by query selection etc.</p>
+            <p class="text-gray-400 text-xl mt-5">There are many ways to select an element in DOM, such as By ID,by Class by query selection etc</p>
         </div>
         <!-- Question-2 -->
-        <div class="bg-white px-5 py-5 rounded-2xl mt-6">
+        <div class="bg-white px-5 py-5 rounded-2xl mt-6 drop-shadow-lg">
             <h2 class="font-bold text-2xl">
                 Question-2: What is the difference between innerHTML, innerText, and textContent ?
             </h2>
@@ -57,7 +57,7 @@
             <p class="text-gray-400 text-xl mt-5">Inner HTML means HTML code of a selected element or object while innerTEXT means inner value of an element and textContent defines tge text content of an element</p>
         </div>
         <!-- Question-3 -->
-        <div class="bg-white px-5 py-5 rounded-2xl mt-6">
+        <div class="bg-white px-5 py-5 rounded-2xl mt-6 drop-shadow-lg">
             <h2 class="font-bold text-2xl">
                 Question-3: What is event delegation in the DOM?
             </h2>
@@ -65,23 +65,22 @@
             <p class="text-gray-400 text-xl mt-5">Event delegation means adding an event listener to a parent element to control its child elements</p>
         </div>
         <!-- Question-4 -->
-        <div class="bg-white px-5 py-5 rounded-2xl mt-6">
+        <div class="bg-white px-5 py-5 rounded-2xl mt-6 drop-shadow-lg">
             <h2 class="font-bold text-2xl">
                 Question-4: What is event bubbling in the DOM?
             </h2>
             <hr class="border-dashed border text-gray-300 mt-5">
-            <p class="text-gray-400 text-xl mt-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae eveniet quisquam deleniti. Tempora alias, accusamus sit quas blanditiis quo labore asperiores, aliquid sint dolorem voluptatum magni, temporibus cupiditate adipisci quos?</p>
+            <p class="text-gray-400 text-xl mt-5">Event bubbling in the DOM is a thing where if any event occurs in the child element it bubbles up to the parent element .It means any event listeners will work on the full event</p>
         </div>
         <!-- Question-5 -->
-        <div class="bg-white px-5 py-5 rounded-2xl mt-6">
+        <div class="bg-white px-5 py-5 rounded-2xl mt-6 drop-shadow-lg">
             <h2 class="font-bold text-2xl">
                 Question-5: How do you create, add, and remove elements using JavaScript?
             </h2>
             <hr class="border-dashed border text-gray-300 mt-5">
-            <p class="text-gray-400 text-xl mt-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae eveniet quisquam deleniti. Tempora alias, accusamus sit quas blanditiis quo labore asperiores, aliquid sint dolorem voluptatum magni, temporibus cupiditate adipisci quos?</p>
+            <p class="text-gray-400 text-xl mt-5">I will create elements in JavaScript by using createElement function , add element by append function and remove element by remove function also there are many ways to add and remove element in JavaScript</p>
         </div>
     </main>
-    <footer></footer>
 <script>
     document.getElementById('previous').addEventListener('click',function(){
         window.location.href="./index.html"
